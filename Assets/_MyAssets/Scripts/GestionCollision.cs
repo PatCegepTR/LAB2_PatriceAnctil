@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GestionCollision : MonoBehaviour
 {
-    //Attributs
     private GestionJeu _gestionJeu;
     private bool _toucher = false;
 
@@ -21,8 +20,8 @@ public class GestionCollision : MonoBehaviour
             if (!_toucher)
             {
                 gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
-                _gestionJeu.AugmenterPointage();
                 Debug.Log("Touché!!!");
+                _gestionJeu.AugmenterPointage();
                 _toucher = true;
             }
         }
