@@ -35,8 +35,8 @@ public class GestionJeu : MonoBehaviour
     private static void Instructions()
     {
         Debug.Log("*** Prison ***");
-        Debug.Log("Échape toi de la prison le plus rapidement possible");
-        Debug.Log("Chaque obstacle qui sera touché entraine une pénalité");
+        Debug.Log("Échappe toi de la prison le plus rapidement possible");
+        Debug.Log("Chaque obstacle ou policier qui sera touché entraine une pénalité");
     }
 
     // Méthodes publiques

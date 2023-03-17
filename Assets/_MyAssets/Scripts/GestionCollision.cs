@@ -20,9 +20,9 @@ public class GestionCollision : MonoBehaviour
             if (!_toucher)
             {
                 gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
-                Debug.Log("Touché!!!");
-                _gestionJeu.AugmenterPointage();
+                Debug.Log("Touche!!!");
                 _toucher = true;
+                _gestionJeu.AugmenterPointage();
             }
         }
     }
