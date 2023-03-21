@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    //Attributs (privé avec _ pour différencier)
     [SerializeField] private float _vitesse = 500;
     private bool _estActif = true;
     private Rigidbody _rb;
@@ -29,17 +28,22 @@ public class Player : MonoBehaviour
     {
         float positionX = Input.GetAxis("Horizontal");
         float positionZ = Input.GetAxis("Vertical");
-        Vector3 direction = new Vector3(positionX, 0f, positionZ);
-        //transform.Translate(direction * Time.deltaTime * _vitesse);
+
+        //Mouvements personnage
+        Vector3 direction = new Vector3(positionX, 0f, positionZ).normalized;
         _rb.velocity = direction * Time.fixedDeltaTime * _vitesse;
-        //_rb.AddForce(direction* Time.fixedDeltaTime * _vitesse);
+
+        //Orientation personnage
+        float anglePerso = Mathf.Atan2(positionX, positionZ) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, anglePerso, 0);
+        
+
     }
 
 
     // Méthode publique
     public void FinPartie()
     {
-        //this.gameObject.SetActive(false);
         _estActif= false;
     }
 
