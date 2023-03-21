@@ -26,8 +26,8 @@ public class Player : MonoBehaviour
 
     private void MouvementsJoueur()
     {
-        float positionX = Input.GetAxis("Horizontal");
-        float positionZ = Input.GetAxis("Vertical");
+        float positionX = Input.GetAxisRaw("Horizontal");
+        float positionZ = Input.GetAxisRaw("Vertical");
 
         //Mouvements personnage
         Vector3 direction = new Vector3(positionX, 0f, positionZ).normalized;
@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         float anglePerso = Mathf.Atan2(positionX, positionZ) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, anglePerso, 0);
         
-
+        
     }
 
 
