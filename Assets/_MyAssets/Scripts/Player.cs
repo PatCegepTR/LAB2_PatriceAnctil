@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float _vitesse = 500;
+    [SerializeField] private float positionX = -46;
+    [SerializeField] private float positionZ = -46;
     private bool _estActif = true;
     private Rigidbody _rb;
 
@@ -12,7 +14,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         // Position de départ du joueur
-        transform.position = new Vector3(-46f, 0.01f, -46f);
+        transform.position = new Vector3(positionX, 0.01f, positionZ);
         _rb = GetComponent<Rigidbody>();
     }
 

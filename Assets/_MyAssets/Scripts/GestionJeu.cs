@@ -29,13 +29,12 @@ public class GestionJeu : MonoBehaviour
     {
         _pointage = 0;
         Instructions();
-
     }
 
     private static void Instructions()
     {
         Debug.Log("*** Prison ***");
-        Debug.Log("Échappe toi de la prison le plus rapidement possible");
+        Debug.Log("Rejoins ta femme à la cafétéria de la prison, prend la voiture pour rejoindre ton avion puis partez vers le mexique!!!");
         Debug.Log("Chaque obstacle ou policier qui sera touché entraine une pénalité");
     }
 
