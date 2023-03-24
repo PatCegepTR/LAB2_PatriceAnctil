@@ -20,8 +20,8 @@ public class GestionArrivee : MonoBehaviour
     {
         int indexScene = SceneManager.GetActiveScene().buildIndex;
 
-       // if(indexScene == 1)
-       // {
+        if(indexScene == 2)
+        {
             if (collision.gameObject.tag == "Player")
             {
                 int penalite = _gestionJeu.GetPointage();
@@ -33,7 +33,7 @@ public class GestionArrivee : MonoBehaviour
 
                 _player.FinPartie();
             }
-       // }
+        }
         else
         {
             //Charger la scène suivante
